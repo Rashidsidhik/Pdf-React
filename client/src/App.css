@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #54545e #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+     transform: rotate(1turn);
+  }
+}
+
+
+/* #pdf-container {
+  width: 100%; 
+  max-width: 800px; 
+  max-height: 500px; 
+  overflow: auto;
+} */
+
+#pdf-container {
+  width: 100%;
+  max-width: 100%; /* Adjust the maximum width as needed for larger screens */
+  max-height: auto; /* Remove the fixed maximum height */
+  overflow: auto;
+}
+
+/* For screens narrower than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  #pdf-container {
+    max-width: 100%; /* Set the maximum width to 100% to fit mobile screens */
+  }
+}
