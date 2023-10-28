@@ -1,0 +1,12 @@
+{
+    "extends":"tslint:recommended",
+    "defaultSeverity":"error",
+    "rules":{
+        "no-shadowed-variable": [true, { "ignore-module": false, "ignore-function": true, "ignore-variable": true }],
+        "no-console":{
+            "severity":"warning",
+            "options": ["debug","info","log","time","timeEnd","trace"]
+        }
+    },
+    "jsRules": {}
+}
